@@ -1,32 +1,24 @@
 #pragma once
 
-// #include <glew.h>
-#include "external/glew/include/glew.h"
-
-// #include <glfw3.h>
-#include "external/glfw/include/glfw3.h"
-
-
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
 
 #include <iostream>
 using namespace std;
 
-
-class Window
-{
+class Window {
 public:
-	Window(int width, int height);
+  Window(int width, int height);
 
-	~Window();
+  ~Window();
 
-	void Input();
+  void Input();
 
-	void Resize();
+  void Resize();
 
-	void Mainloop();
+  void Mainloop();
 
 private:
-
-	int m_width,m_height;
-	GLFWwindow *window_ptr;
+  int m_width, m_height;
+  GLFWwindow *window_ptr;
 };
